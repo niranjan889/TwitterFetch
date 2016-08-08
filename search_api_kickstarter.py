@@ -15,22 +15,6 @@ search_keywords = ['kickstarter','kck.st']
 database_name = 'twitter_kickstarter_search_new'
 
 
-# This method crawls the URL provided and returns the text
-# def Get_Web_Text(url):
-#     print 'Getting Web Text for url : %s'%(url)
-#     try:
-#         html = urlopen(url).read()    
-#         web_text = nltk.clean_html(html)
-#         web_text = web_text.split()
-#         web_text = ' '.join(web_text)
-#         web_text = smart_str(web_text)
-#     except Exception:
-#         print Exception
-#         web_text = ''
-#         pass
-#     return web_text
-
-
 
 def Create_Couchdb_Instance(dtbs_name):
     

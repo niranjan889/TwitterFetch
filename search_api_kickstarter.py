@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Install TwitterSearch as it supports new API 1.1 . Do easy_install TwitterSearch
-from TwitterSearch import *
 import sys
 import time
-from time import strftime
 import nltk
-import re   
+import re  
+from time import strftime
+from TwitterSearch import *
 from django.utils.encoding import smart_str
 from couchdb.client import Server
 from send_email import Send_Email

@@ -14,8 +14,6 @@ from send_email import Send_Email
 search_keywords = ['kickstarter','kck.st']
 database_name = 'twitter_kickstarter_search_new'
 
-
-
 def Create_Couchdb_Instance(dtbs_name):
     
     server = Server("http://127.0.0.1:5984")

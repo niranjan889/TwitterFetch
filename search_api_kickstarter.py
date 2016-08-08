@@ -6,9 +6,9 @@ import nltk
 import re  
 from time import strftime
 from TwitterSearch import *
-from django.utils.encoding import smart_str
 from couchdb.client import Server
 from send_email import Send_Email
+from django.utils.encoding import smart_str
 
 # Set the search keywords and the database name here
 search_keywords = ['kickstarter','kck.st']

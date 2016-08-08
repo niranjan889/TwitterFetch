@@ -31,14 +31,12 @@ def write_log(no_users_db,no_tweets_collected):
     f.write(smart_str(no_tweets_collected)+'\n')
     f.close()
 
-
 class GetTwitterData:
 
     def Get_Data(self):
         
         MAX_PAGES = 15
         RESULTS_PER_PAGE = 100
-
 
         tso = TwitterSearchOrder() # create a TwitterSearchOrder object
         tso.setKeywords(search_keywords) # let's define all words we would like to have a look for
@@ -146,4 +144,3 @@ if __name__ == '__main__':
                 Send_Email(message)
                 time.sleep(1800)
     #search_api_new()
-

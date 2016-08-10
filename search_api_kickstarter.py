@@ -48,8 +48,8 @@ class GetTwitterData:
 
         # it's about time to create a TwitterSearch object with our secret tokens
         ts = TwitterSearch(
-                           consumer_key = 'z',
-                           consumer_secret = 'z',
+                           consumer_key = 'enter your key',
+                           consumer_secret = 'enter your secret',
                            access_token = '81498230-z',
                            access_token_secret = 'z'
                            )
@@ -114,15 +114,10 @@ class GetTwitterData:
                             doc['text'].append({'urls':urls,'image':[im_id,im_url],'mentions':mentions,'tweet_id':tweet['id'],'text':tweet_text,'timestamp':time_stmp,'coordinates':tweet['coordinates'],'source':tweet['source'],'in_reply_to_screen_name':tweet['in_reply_to_screen_name'],'retweet_count':tweet['retweet_count']})
                             no_tweets += 1
                             db[user_id] = doc
-                    print 'No of users :'
-                    print no_users
-                    print 'No of tweets :'
-                    print no_tweets
-                    print strftime("%Y-%m-%d %H:%M:%S")
+                    print 'No of users {}, No. of Tweets: {}, Time: {}'.format(no_users,no_tweets,strftime("%Y-%m-%d %H:%M:%S"))
                     write_log(no_users,no_tweets)
                 except Exception as e:
-                    print 'Error ...'
-                    print e
+                    print 'Exception: {}'.format(r)
 
             i = i+1
             # In the new API version 1.1 , the rate limits are fixed per 15 mins instead of per hour

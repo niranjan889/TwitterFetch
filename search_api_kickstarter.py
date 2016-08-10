@@ -12,7 +12,7 @@ from django.utils.encoding import smart_str
 
 # Set the search keywords and the database name here
 search_keywords = ['kickstarter','kck.st']
-database_name = 'twitter_kickstarter_search_new'
+database_name = 'my_kck_search'
 
 #Function to create/ return database instance
 def Create_Couchdb_Instance(dtbs_name):

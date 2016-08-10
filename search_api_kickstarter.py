@@ -14,6 +14,7 @@ from django.utils.encoding import smart_str
 search_keywords = ['kickstarter','kck.st']
 database_name = 'twitter_kickstarter_search_new'
 
+#Function to create/ return database instance
 def Create_Couchdb_Instance(dtbs_name):
     
     server = Server("http://127.0.0.1:5984")

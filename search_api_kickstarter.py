@@ -138,6 +138,5 @@ if __name__ == '__main__':
             else:
                 message = 'Search API : '+database_name+' going to sleep with error : '+smart_str(e)
                 print message
-                Send_Email(message)
                 time.sleep(1800)
     #search_api_new()

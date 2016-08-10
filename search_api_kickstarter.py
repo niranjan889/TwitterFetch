@@ -24,6 +24,7 @@ def Create_Couchdb_Instance(dtbs_name):
         db = server[dtbs_name]
     return db
 
+#Function to write the logs
 def write_log(no_users_db,no_tweets_collected):
     f = open('log_'+database_name+'.txt','w')
     f.write('No of users :'+'\n')

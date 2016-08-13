@@ -112,19 +112,16 @@ def start_proc():
     no_errors=0
     no_notfound=0
     db = Create_Couchdb_Instance('twitter_frnds')
-    dict_unames = json.loads(open('snames_All.json').read())
+    dict_unames = json.loads(open('snames_All.json').read())    #File containing screen names of users
     for screen_name in dict_unames:
-        s_cnt+=1
         try:
-            if s_cnt>112500 and s_cnt<135000:
-                print 'scr:%s'%(str(screen_name))
-                temp_dict = get_new(screen_name)
-                if temp_dict!=0:
-                    db.create(temp_dict)
-                else:
-                    no_notfound+=1
-                no_users+=1
-                write_log(no_users,no_errors,no_notfound)
+            temp_dict = get_new(screen_name)
+            if temp_dict!=0:
+                db.create(temp_dict)
+            else:
+                no_notfound+=1
+            no_users+=1
+            write_log(no_users,no_errors,no_notfound)
         except Exception as e:
             print 'Error encountered : '
             print e, screen_name
@@ -138,7 +135,6 @@ def write_log(no_users,no_errors,no_notfound):
     file.close()         
             
 if __name__ == '__main__':
-#     get_followers()
     start_proc()
 #     check_rate_limit_status1('friends/list','friends')
 

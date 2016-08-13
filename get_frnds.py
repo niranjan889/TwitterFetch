@@ -13,7 +13,7 @@ import json
 import sys
 from twython import Twython
 
-program_no = 'frndsk1'
+program_no = 'frnds1'
 
 #Karthik's keys
 CONSUMER_KEY = ""

@@ -15,7 +15,7 @@ from twython import Twython
 
 program_no = 'frnds1'
 
-#Karthik's keys
+#App keys
 CONSUMER_KEY = ""
 CONSUMER_SECRET = ""
 ACCESS_KEY=""

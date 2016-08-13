@@ -58,10 +58,7 @@ def get_new(screen_name):
                 check_rate_limit_status1(typ+'/ids',typ)
 #                 exec(pages[i]+" = twitter.get_"+str(typ)+"_ids(screen_name=user, count=fnum, skip_status=1, cursor="+oldpages[i]+"['next_cursor'])")
                 exec(pages[i]+" = twitter.get_"+str(typ)+"_ids(screen_name=user, count=fnum, cursor="+oldpages[i]+"['next_cursor'])")
-#                 ps=twitter.get_friends_list(screen_name=user)
-#                 print ps
-#                 sys.exit(1)
-#             sys.exit(1)
+            
             followers = []
             for p in range(pnum):
                 try:
@@ -77,7 +74,7 @@ def get_new(screen_name):
   
 def Create_Couchdb_Instance(dtbs_name):
     
-    server = Server("http://141.217.48.222:5984")
+    server = Server("http://127.0.0.1:5984")
     try:
         db = server.create(dtbs_name)
     except Exception:
@@ -124,7 +121,6 @@ def start_proc():
                 temp_dict = get_new(screen_name)
                 if temp_dict!=0:
                     db.create(temp_dict)
-                    
                 else:
                     no_notfound+=1
                 no_users+=1
